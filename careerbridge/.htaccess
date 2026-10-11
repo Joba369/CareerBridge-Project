@@ -1,0 +1,10 @@
+# CareerBridge – Apache settings (XAMPP)
+Options -Indexes
+DirectoryIndex index.php
+
+# Never serve database dumps, docs or helper scripts over the web
+<FilesMatch "\.(sql|md|sh|bat|log)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
